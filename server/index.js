@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const axios = require('axios')
-const cors = require('axios')
+const cors = require('cors')
 const bodyParser = require('body-parser')
 require('dotenv').config()
 const port = 4001
@@ -21,7 +21,15 @@ app.get('/api/address/:address', async (req, res) => {
       return ''
     }
 
-    let data = axios.get('')
+    let data = await axios.get(
+      'place/autocomplate/json' +
+        '?input=' +
+        req.params.address +
+        '&types=address' +
+        '&key=' +
+        process.env.GOOGLE_MAPS_PLATFORM_API_KEY
+    )
+    res.status(200).json(data.data.predictions)
   } catch (error) {
     console.log(error)
   }

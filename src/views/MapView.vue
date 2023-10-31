@@ -76,17 +76,14 @@ onMounted(() => {
 })
 
 const initMap = () => {
-  const map = new window.google.maps.Map(
-    document.getElementById('map') as HTMLElement,
-    {
-      center: { lat: -34.397, lng: 150.644 },
-      zoom: 8,
-      fullscreenControl: false,
-      zoomControl: false,
-      streetViewControl: false,
-      mapTypeControl: false
-    }
-  )
+  const map = new window.google.maps.Map(document.getElementById('map'), {
+    center: { lat: -34.397, lng: 150.644 },
+    zoom: 8,
+    fullscreenControl: false,
+    zoomControl: false,
+    streetViewControl: false,
+    mapTypeControl: false
+  })
 
   console.log(map)
 }
