@@ -1,4 +1,4 @@
-# Uber Clone (uber-clone)
+# Uber Clone
 
 <p float="left">
   <img width="270" alt="Screenshot 2022-11-23 at 17 10 03" src="https://user-images.githubusercontent.com/108229029/203521356-c0f3956f-2b71-4e53-998a-65d10ffd6f29.png">
