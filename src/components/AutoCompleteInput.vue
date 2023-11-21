@@ -1,34 +1,66 @@
 <template>
-  <div id="AutoCompleteInput" class="flex items-center">
-    <input
-      :id="theId"
-      :placeholder="placeholder"
-      autocomplete="off"
-      v-model="inputComputed"
-      @click="emit('isActive', true)"
-      type="text"
-      class="text-md focus:shadow-outline w-full bg-gray-100 px-3 py-2.5 leading-tight text-gray-700 focus:bg-gray-200 focus:outline-none"
+  <div 
+    id="AutoCompleteInput" 
+    class="flex items-center"
+  >
+    <input 
+        :id="theId"
+        @click="emit('isActive', true);"
+        v-model="inputComputed"
+        class="
+            text-md
+            bg-gray-100
+            appearance-none 
+            rounded 
+            w-full 
+            py-2.5
+            px-3
+            text-gray-700 
+            leading-tight 
+            focus:outline-none 
+            focus:shadow-outline
+            focus:bg-gray-200
+        "
+        type="text" 
+        :placeholder="placeholder" 
+        autocomplete="off"
     />
-    <WindowCloseIcon @click="emit('clearInput')" fillColor="#2e2e2d" />
+    <WindowCloseIcon 
+      fillColor="#2e2e2d" 
+      @click="$emit('clearInput')" 
+    />
   </div>
 </template>
 
-<script setup lang="ts">
-import { computed, defineEmits, defineProps, toRefs, withDefaults } from 'vue'
-import WindowCloseIcon from 'vue-material-design-icons/WindowClose.vue'
+<script setup>
 
-const emit = defineEmits(['isActive', 'update:input', 'clearInput'])
+  import { computed, defineEmits, defineProps, toRefs } from 'vue';
+  import WindowCloseIcon from 'vue-material-design-icons/WindowClose.vue';
 
-type Props = {
-  theId: string
-  input: string
-  placeholder: string
-}
-const props = withDefaults(defineProps<Props>(), {})
-const { theId, input, placeholder } = toRefs(props)
+  const emit = defineEmits(['update:input', 'clearInput', 'isActive'])
 
-const inputComputed = computed<string>({
-  get: () => input.value,
-  set: (value) => emit('update:input', value)
-})
+  const props = defineProps({
+    theId: String,
+    input: String,
+    placeholder: String
+  })
+
+  const { theId, input, placeholder } = toRefs(props)
+
+  const inputComputed = computed({
+    get: () => input.value,
+    set: (val) => emit('update:input', val)
+  })
+
 </script>
+
+<style lang="scss" scoped>
+  #ServiceSetupLarge {
+    .bg-custom-color {
+      background-color: rgb(237, 237, 237);
+    }
+    .custom-height {
+      height: 100px;
+    }
+  }
+</style>
