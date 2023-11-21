@@ -87,15 +87,15 @@
 </template>
 
 <script setup>
-    import { useRouter } from 'vue-router'
-    import ServiceSelectSmall from '@/components/ServiceSelectSmall.vue';
     import ServiceSelectLarge from '@/components/ServiceSelectLarge.vue';
+import ServiceSelectSmall from '@/components/ServiceSelectSmall.vue';
+import { useRouter } from 'vue-router';
 
-    import MagnifyIcon from 'vue-material-design-icons/Magnify.vue';
-    import HomeIcon from 'vue-material-design-icons/Home.vue';
-    import MapMarkerIcon from 'vue-material-design-icons/MapMarker.vue';
-    import { onMounted } from '@vue/runtime-core';
     import { useDirectionStore } from '@/store/direction-store';
+import { onMounted } from '@vue/runtime-core';
+import HomeIcon from 'vue-material-design-icons/Home.vue';
+import MagnifyIcon from 'vue-material-design-icons/Magnify.vue';
+import MapMarkerIcon from 'vue-material-design-icons/MapMarker.vue';
 
     const router = useRouter()
     const direction = useDirectionStore()
