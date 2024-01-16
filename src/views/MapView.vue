@@ -2,17 +2,19 @@
   <div>
     <div
       id="BackBtn"
-      class="absolute z-50 rounded-full bg-white p-1 top-8 left-4"
-      @click="goBack()">
+      class="absolute left-4 top-8 z-50 rounded-full bg-white p-1"
+      @click="goBack()"
+    >
       <ArrowLeftIcon :size="40" />
     </div>
 
     <div id="map" />
 
     <div id="VehicleSelection" class="w-full">
-      <div class="w-full h-2 border-t"></div>
+      <div class="h-2 w-full border-t"></div>
       <div
-        class="w-full text-center border-t-2 p-1.5 text-gray-700 text-lg font-semibold">
+        class="w-full border-t-2 p-1.5 text-center text-lg font-semibold text-gray-700"
+      >
         Distance - {{ distance.text }}
       </div>
 
@@ -20,9 +22,9 @@
         <div class="bg-custom-gray">
           <div class="flex items-center px-4 py-5">
             <img width="75" src="img/uber/ride.png" />
-            <div class="w-full ml-3">
+            <div class="ml-3 w-full">
               <div class="flex items-center justify-between">
-                <div class="text-2xl mb-1">UberX</div>
+                <div class="mb-1 text-2xl">UberX</div>
                 <div class="text-xl">
                   {{ calculatePrice(1, distance.value) }}
                 </div>
@@ -35,9 +37,9 @@
         <div>
           <div class="flex items-center px-4 py-5">
             <img width="75" src="img/uber/comfort.png" />
-            <div class="w-full ml-3">
+            <div class="ml-3 w-full">
               <div class="flex items-center justify-between">
-                <div class="text-2xl mb-1">Comfort</div>
+                <div class="mb-1 text-2xl">Comfort</div>
                 <div class="text-xl">
                   £{{ calculatePrice(1.25, distance.value) }}
                 </div>
@@ -50,9 +52,9 @@
         <div>
           <div class="flex items-center px-4 py-5">
             <img width="75" src="img/uber/uberxl.png" />
-            <div class="w-full ml-3">
+            <div class="ml-3 w-full">
               <div class="flex items-center justify-between">
-                <div class="text-2xl mb-1">UberXL</div>
+                <div class="mb-1 text-2xl">UberXL</div>
                 <div class="text-xl">
                   £{{ calculatePrice(1.5, distance.value) }}
                 </div>
@@ -64,9 +66,11 @@
       </div>
 
       <div
-        class="flex items-center justify-center bg-white py-6 px-4 w-full absolute bottom-0 shadow-inner">
+        class="absolute bottom-0 flex w-full items-center justify-center bg-white px-4 py-6 shadow-inner"
+      >
         <button
-          class="bg-black text-2xl text-white py-4 px-4 rounded-sm w-full">
+          class="w-full rounded-sm bg-black px-4 py-4 text-2xl text-white"
+        >
           Confirm UberX
         </button>
       </div>
@@ -75,11 +79,11 @@
 </template>
 
 <script setup>
+import { useDirectionStore } from '@/store/direction-store'
 import axios from 'axios'
 import { onMounted, ref } from 'vue'
-import { useRouter } from 'vue-router'
 import ArrowLeftIcon from 'vue-material-design-icons/ArrowLeft.vue'
-import { useDirectionStore } from '@/store/direction-store'
+import { useRouter } from 'vue-router'
 
 import mapStyles from '../mapStyles'
 

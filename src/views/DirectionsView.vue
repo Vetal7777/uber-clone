@@ -1,12 +1,12 @@
 <template>
   <div id="Directions">
-    <div class="grid grid-cols-12 mt-4 shadow-md">
+    <div class="mt-4 grid grid-cols-12 shadow-md">
       <div class="col-span-2 mx-auto">
         <div @click="router.push('/')">
           <ArrowLeftIcon :size="35" />
         </div>
 
-        <div class="h-16 mt-4 w-full">
+        <div class="mt-4 h-16 w-full">
           <div :class="[isPickupActive ? 'circle-black' : 'circle-gray']" />
           <div class="line"></div>
           <div :class="[!isPickupActive ? 'square-black' : 'square-gray']" />
@@ -14,7 +14,7 @@
       </div>
 
       <div class="col-span-10 pr-4">
-        <div class="w-full h-5"></div>
+        <div class="h-5 w-full"></div>
 
         <div class="mb-2 mt-5">
           <AutoCompleteInput
@@ -41,9 +41,9 @@
     <div v-for="address in addressData" :key="address">
       <div
         @click="storeAddress(address.description)"
-        class="flex items-center custom-border-bottom"
+        class="custom-border-bottom flex items-center"
       >
-        <div class="bg-gray-400 mx-5 my-3.5 p-1.5 rounded-full">
+        <div class="mx-5 my-3.5 rounded-full bg-gray-400 p-1.5">
           <MapMarkerIcon :size="30" fillColor="#f5f5f5" />
         </div>
         <div>

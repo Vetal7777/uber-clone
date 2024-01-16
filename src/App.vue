@@ -7,10 +7,10 @@
 </template>
 
 <style lang="scss">
-  .slide-leave-active {
-    transition: transform 0.175s ease-out;
-  }
-  .slide-leave-to {
-    transform: translate(-100%, 0);
-  }
+.slide-leave-active {
+  transition: transform 0.175s ease-out;
+}
+.slide-leave-to {
+  transform: translate(-100%, 0);
+}
 </style>

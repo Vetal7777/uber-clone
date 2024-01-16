@@ -1,47 +1,36 @@
 <template>
   <div id="ServiceSetupSmall">
-    <div class="bg-custom-color custom-height w-full rounded-2xl relative">
-
-      <div 
-        class="
-            absolute 
-            top-1/3
-            left-1/3
-            transform 
-            -translate-x-1/4 
-            -translate-y-1/4
-            mt-0.5
-        "
+    <div class="bg-custom-color custom-height relative w-full rounded-2xl">
+      <div
+        class="absolute left-1/3 top-1/3 mt-0.5 -translate-x-1/4 -translate-y-1/4 transform"
       >
-        <img width="55" :src="'img/uber/' + image + '.png'">
+        <img width="55" :src="'img/uber/' + image + '.png'" />
       </div>
     </div>
 
-    <div class="text-xs text-center mt-2 text-gray-900">
-        {{ text }}
+    <div class="mt-2 text-center text-xs text-gray-900">
+      {{ text }}
     </div>
   </div>
 </template>
 
 <script setup>
+import { defineProps, toRefs } from 'vue'
 
-  import { defineProps, toRefs } from 'vue';
-
-  const props = defineProps({
-    text: String,
-    image: String
-  })
-  const { text, image } = toRefs(props)
-
+const props = defineProps({
+  text: String,
+  image: String
+})
+const { text, image } = toRefs(props)
 </script>
 
 <style lang="scss" scoped>
-  #ServiceSetupSmall {
-    .bg-custom-color {
-      background-color: rgb(237, 237, 237);
-    }
-    .custom-height {
-      height: 70px;
-    }
+#ServiceSetupSmall {
+  .bg-custom-color {
+    background-color: rgb(237, 237, 237);
   }
+  .custom-height {
+    height: 70px;
+  }
+}
 </style>
