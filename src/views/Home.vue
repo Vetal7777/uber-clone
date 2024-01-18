@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import LogoSvgIco from "@/assets/img/logo.svg?raw";
+import LogoSvgIco from '@/assets/img/logo.svg?raw'
 </script>
 
 <style lang="scss">
