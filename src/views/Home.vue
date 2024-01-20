@@ -9,6 +9,7 @@
       <SearchInput />
       <!-- Suggestions -->
       <Block title="Suggestions">
+        <!-- Link to Servives -->
         <template #header>
           <button
             @click="$router.push(RouterPath.services)"
@@ -17,7 +18,7 @@
             See All
           </button>
         </template>
-
+        <!-- Suggestions -->
         <div class="grid grid-cols-3 gap-7">
           <SuggestionItem
             v-for="({ promo, title, img }, key) in suggestionList"

@@ -6,8 +6,10 @@
       <div class="text-6xl font-bold">Services</div>
       <!-- See All link -->
     </div>
+
     <Block title="Go anywhere, get anything">
       <div class="grid grid-cols-3 gap-7">
+        <!-- Suggestions -->
         <SuggestionItem
           v-for="({ promo, title, img }, key) in suggestionList"
           :key="key"
