@@ -29,6 +29,16 @@
           />
         </div>
       </Block>
+      <!-- Ways -->
+      <Block title="More ways to use Uber">
+        <div class="flex gap-7 overflow-x-auto">
+          <Slide
+            img="/lux.png"
+            title="Go in luxury"
+            description="Elevated service, high-end cars"
+          />
+        </div>
+      </Block>
     </main>
   </div>
 </template>
@@ -37,6 +47,7 @@
 import LogoSvgIco from '@/assets/img/logo.svg?raw'
 import Block from '@/components/Block/Block.vue'
 import SearchInput from '@/components/SearchInput.vue'
+import Slide from '@/components/Slide/Slide.vue'
 import SuggestionItem from '@/components/SuggestionItem/SuggestionItem.vue'
 import { RouterPath } from '@/router/types'
 import { suggestionList } from '@/utils/suggestion-list.config'

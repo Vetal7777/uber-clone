@@ -17,7 +17,8 @@ export default {
       },
       spacing: {
         17.5: '70px',
-        37: '148px'
+        37: '148px',
+        110: '410px'
       }
     }
   },
