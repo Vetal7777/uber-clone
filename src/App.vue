@@ -22,12 +22,13 @@ import ControlBar from '@/components/ControlBar.vue'
 import Popup from '@/components/Popups/PopupContainer.vue'
 import { computed } from 'vue'
 import { useRouter } from 'vue-router'
+import { RouterHash } from './router/types'
 
 const router = useRouter()
 
 const popup = computed(() => Boolean(router.currentRoute.value.hash))
 
-const onClose = () => router.replace({ hash: '' })
+const onClose = () => router.replace({ hash: RouterHash.empty })
 </script>
 
 <style lang="scss">

@@ -1,5 +1,8 @@
 <template>
-  <div class="fixed bottom-0 left-0 z-20 h-screen w-screen overflow-auto">
+  <div
+    v-if="currentPopup"
+    class="fixed bottom-0 left-0 z-20 h-screen w-screen overflow-auto"
+  >
     <component :is="currentPopup" />
     <button
       class="absolute left-5 top-5 z-10 rounded-full bg-white p-2 transition-all hover:scale-110"
@@ -33,11 +36,13 @@ const currentHash: ComputedRef<RouterHash | null> = computed(() => {
   switch (hash) {
     case RouterHash.lux:
       return RouterHash.lux
+      break
     case RouterHash.comfort:
       return RouterHash.comfort
+      break
   }
 
-  if (hash !== '') {
+  if (hash !== RouterHash.empty) {
     throw new Error(`Couldn't find popup with hash ${hash}`)
   }
 

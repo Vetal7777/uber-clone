@@ -10,5 +10,6 @@ export enum RouterName {
 
 export enum RouterHash {
   lux = '#lux',
-  comfort = '#comfort'
+  comfort = '#comfort',
+  empty = ''
 }
