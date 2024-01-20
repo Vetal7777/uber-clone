@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="flex min-h-screen w-screen flex-col justify-between overflow-auto"
-  >
+  <div class="flex min-h-screen w-screen flex-col justify-between">
     <div class="px-5 py-10">
       <router-view v-slot="{ Component }">
         <!-- Route View -->
@@ -10,7 +8,7 @@
         </transition>
         <!-- Popup -->
         <transition>
-          <Popup v-if="popup" />
+          <Popup v-if="popup" @close="onClose" />
         </transition>
       </router-view>
     </div>
@@ -28,6 +26,8 @@ import { useRouter } from 'vue-router'
 const router = useRouter()
 
 const popup = computed(() => Boolean(router.currentRoute.value.hash))
+
+const onClose = () => router.replace({ hash: '' })
 </script>
 
 <style lang="scss">

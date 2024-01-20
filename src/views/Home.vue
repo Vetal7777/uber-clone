@@ -31,12 +31,18 @@
       </Block>
       <!-- Ways -->
       <Block title="More ways to use Uber">
-        <div class="flex gap-7 overflow-x-auto">
+        <div class="slides flex gap-7 overflow-x-auto">
           <Slide
             img="/lux.png"
             title="Go in luxury"
             description="Elevated service, high-end cars"
-            @click="$router.replace({ hash: '#lux' })"
+            @click="$router.replace({ hash: RouterHash.lux })"
+          />
+          <Slide
+            img="/comfort.png"
+            title="Choose comfort"
+            description="Top-rated drivers, newer cars"
+            @click="$router.replace({ hash: RouterHash.comfort })"
           />
         </div>
       </Block>
@@ -50,7 +56,7 @@ import Block from '@/components/Block/Block.vue'
 import SearchInput from '@/components/SearchInput.vue'
 import Slide from '@/components/Slide/Slide.vue'
 import SuggestionItem from '@/components/SuggestionItem/SuggestionItem.vue'
-import { RouterPath } from '@/router/types'
+import { RouterHash, RouterPath } from '@/router/types'
 import { suggestionList } from '@/utils/suggestion-list.config'
 </script>
 
@@ -60,6 +66,14 @@ import { suggestionList } from '@/utils/suggestion-list.config'
 
   svg {
     @apply h-12 w-min;
+  }
+}
+
+.slides {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
 </style>

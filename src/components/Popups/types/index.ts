@@ -1,3 +1,4 @@
 export enum PopupComponentName {
-  LuxPopup = 'LuxPopup'
+  LuxPopup = 'LuxPopup',
+  ComfortPopup = 'ComfortPopup'
 }
