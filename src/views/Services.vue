@@ -1,9 +1,9 @@
 <template>
-  <div class="flex flex-col gap-16">
+  <div class="flex flex-col gap-5 sm:gap-16">
     <!-- Services header -->
     <div class="flex justify-between">
       <!-- Services article -->
-      <div class="text-6xl font-bold">Services</div>
+      <div class="text-4xl font-bold sm:text-6xl">Services</div>
       <!-- See All link -->
     </div>
 
