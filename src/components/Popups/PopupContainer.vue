@@ -12,7 +12,7 @@
 
 <script setup lang="ts">
 import { RouterHash } from '@/router/types'
-import { popupConfig } from '@/utils/popup.config'
+import { popupMap } from '@/utils/popup.config'
 import { Icon } from '@iconify/vue'
 import { ComputedRef, computed } from 'vue'
 import { useRouter } from 'vue-router'
@@ -22,7 +22,7 @@ const router = useRouter()
 
 const currentPopup = computed<PopupComponentName | null>(() => {
   if (currentHash.value) {
-    return popupConfig[currentHash.value]
+    return popupMap[currentHash.value]
   } else {
     return null
   }
