@@ -36,6 +36,7 @@
             img="/lux.png"
             title="Go in luxury"
             description="Elevated service, high-end cars"
+            @click="$router.replace({ hash: '#lux' })"
           />
         </div>
       </Block>
