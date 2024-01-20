@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-col gap-11">
+  <div class="flex flex-col gap-4 sm:gap-11">
     <div class="flex justify-between">
-      <div class="text-4xl font-bold">{{ title }}</div>
+      <div class="text-xl font-bold sm:text-4xl">{{ title }}</div>
       <slot name="header" />
     </div>
     <slot />

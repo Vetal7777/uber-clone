@@ -1,20 +1,23 @@
 <template>
   <button
     :class="[
-      { 'h-40 max-h-40 justify-end': img, 'justify-center': !img },
-      'bg-base-light-gray relative flex w-full flex-col  items-center gap-5 rounded-xl p-4 text-xl outline-none transition-all hover:scale-105'
+      {
+        'h-24 max-h-24 justify-end sm:h-40 sm:max-h-40': img,
+        'justify-center': !img
+      },
+      'relative flex w-full flex-col items-center gap-3 rounded-xl bg-base-light-gray p-2 text-sm outline-none transition-all hover:scale-105 sm:gap-5 sm:p-4 sm:text-xl '
     ]"
     @click="$emit('click')"
   >
     <!-- Promo label -->
     <div
       v-if="promo"
-      class="bg-base-green absolute bottom-full translate-y-2/4 rounded-full px-4 py-1 text-white"
+      class="absolute bottom-full translate-y-2/4 rounded-full bg-base-green px-2 py-0 text-white sm:px-4 sm:py-1"
     >
       Promo
     </div>
     <!-- Image ico -->
-    <img v-if="img" :src="img" class="max-w-24 overflow-auto" />
+    <img v-if="img" :src="img" class="max-w-12 overflow-auto sm:max-w-24" />
 
     {{ title }}
   </button>

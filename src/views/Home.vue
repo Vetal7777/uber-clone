@@ -1,11 +1,11 @@
 <template>
-  <div class="flex flex-col gap-17.5">
+  <div class="flex flex-col gap-8 sm:gap-17.5">
     <!-- Header -->
     <header>
       <div v-html="LogoSvgIco" class="svg-image" />
     </header>
     <!-- Main -->
-    <main class="flex flex-col gap-12">
+    <main class="flex flex-col gap-6 sm:gap-12">
       <SearchInput />
       <!-- Suggestions -->
       <Block title="Suggestions">
@@ -13,13 +13,13 @@
         <template #header>
           <button
             @click="$router.push(RouterPath.services)"
-            class="text-2xl transition-all hover:opacity-60"
+            class="text-l transition-all hover:opacity-60 sm:text-2xl"
           >
             See All
           </button>
         </template>
         <!-- Suggestions -->
-        <div class="grid grid-cols-3 gap-7">
+        <div class="grid grid-cols-3 gap-3.5 sm:gap-7">
           <SuggestionItem
             v-for="({ promo, title, img }, key) in suggestionList"
             :key="key"
@@ -31,7 +31,7 @@
       </Block>
       <!-- Ways -->
       <Block title="More ways to use Uber">
-        <div class="slides flex gap-7 overflow-x-auto">
+        <div class="slides flex gap-4 overflow-x-auto sm:gap-7">
           <Slide
             img="/lux.png"
             title="Go in luxury"
@@ -65,7 +65,7 @@ import { suggestionList } from '@/utils/suggestion-list.config'
   @apply flex;
 
   svg {
-    @apply h-12 w-min;
+    @apply h-8 w-min sm:h-12;
   }
 }
 

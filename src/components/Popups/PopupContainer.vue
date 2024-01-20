@@ -5,10 +5,14 @@
   >
     <component :is="currentPopup" />
     <button
-      class="absolute left-5 top-5 z-10 rounded-full bg-white p-2 transition-all hover:scale-110"
+      class="absolute left-5 top-5 z-10 rounded-full bg-white p-1 transition-all hover:scale-110 sm:p-2"
       @click="$emit('close')"
     >
-      <Icon icon="material-symbols:close" width="55" сolor="black" />
+      <Icon
+        icon="material-symbols:close"
+        class="text-2xl sm:text-6xl"
+        сolor="black"
+      />
     </button>
   </div>
 </template>

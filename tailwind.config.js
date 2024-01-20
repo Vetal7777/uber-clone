@@ -18,6 +18,7 @@ export default {
       spacing: {
         17.5: '70px',
         37: '148px',
+        42: '164px',
         110: '410px'
       },
       fontSize: {

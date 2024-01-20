@@ -1,6 +1,6 @@
 <template>
   <div class="flex min-h-screen w-screen flex-col justify-between">
-    <div class="px-5 py-10">
+    <div class="sm:pb-42 px-5 pb-20 pt-5 sm:pt-10">
       <router-view v-slot="{ Component }">
         <!-- Route View -->
         <transition name="slide" mode="out-in">
