@@ -1,5 +1,7 @@
 <template>
-  <div class="grid w-full grid-cols-3 border-t-2 border-t-base-gray">
+  <div
+    class="fixed bottom-0 grid w-full grid-cols-2 border-t-2 border-t-base-gray bg-white"
+  >
     <ControlBarButton
       v-for="({ title, iconifyName, routerName }, index) in controlBarList"
       :title="title"

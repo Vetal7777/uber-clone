@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed bottom-0 left-0 h-screen w-screen overflow-auto">
+  <div class="fixed bottom-0 left-0 z-20 h-screen w-screen overflow-auto">
     <component :is="currentPopup" />
     <button
       class="absolute left-5 top-5 z-10 rounded-full bg-white p-2 transition-all hover:scale-110"

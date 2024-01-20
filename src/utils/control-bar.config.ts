@@ -10,10 +10,10 @@ export const controlBarList = [
     title: 'Services',
     routerName: RouterName.services,
     iconifyName: 'fa6-brands:uber'
-  },
-  {
-    title: 'Destination',
-    routerName: RouterName.services,
-    iconifyName: 'bxs:map'
   }
+  // {
+  //   title: 'Destination',
+  //   routerName: RouterName.services,
+  //   iconifyName: 'bxs:map'
+  // }
 ]
