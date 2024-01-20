@@ -5,10 +5,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        'base-light-gray': '#E8E8E8'
+        'base-light-gray': '#E8E8E8',
+        'base-green': '#3B804B'
       },
       textColor: {
-        'base-light-black': '#4B4B4B'
+        'base-light-black': '#4B4B4B',
+        'base-gray': '#545454'
+      },
+      borderColor: {
+        'base-gray': '#F3F3F3'
       },
       spacing: {
         17.5: '70px',

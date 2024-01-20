@@ -1,4 +1,5 @@
 export type SuggestionItemProps = {
   title: string
-  src?: string
+  img?: string
+  promo?: boolean
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="gap-17.5 flex h-screen w-screen flex-col px-5 py-10 outline-none">
+  <div class="gap-17.5 flex flex-col">
     <!-- Header -->
     <header>
       <div v-html="LogoSvgIco" class="svg-image" />
@@ -9,13 +9,27 @@
       <SearchInput />
       <!-- Suggestions -->
       <div class="flex flex-col gap-11">
-        <!-- Suggestions article -->
-        <div class="text-4xl font-bold">Suggestions</div>
+        <!-- Suggestions header -->
+        <div class="flex justify-between">
+          <!-- Suggestions article -->
+          <div class="text-4xl font-bold">Suggestions</div>
+          <!-- See All link -->
+          <button
+            @click="$router.push(RouterPath.services)"
+            class="text-2xl transition-all hover:opacity-60"
+          >
+            See All
+          </button>
+        </div>
         <!-- Suggestions list -->
-        <div class="grid grid-cols-3 gap-4">
-          <SuggestionItem title="Ride" src="ride.png" />
-          <SuggestionItem title="Package" src="package.png" />
-          <SuggestionItem title="Reserve" src="reserve.png" />
+        <div class="grid grid-cols-3 gap-7">
+          <SuggestionItem
+            v-for="({ promo, title, img }, key) in suggestionList"
+            :key="key"
+            :promo="promo"
+            :title="title"
+            :img="img"
+          />
         </div>
       </div>
     </main>
@@ -26,6 +40,8 @@
 import LogoSvgIco from '@/assets/img/logo.svg?raw'
 import SearchInput from '@/components/SearchInput.vue'
 import SuggestionItem from '@/components/SuggestionItem/SuggestionItem.vue'
+import { RouterPath } from '@/router/types'
+import { suggestionList } from '@/utils/suggestion-list.config'
 </script>
 
 <style lang="scss">
