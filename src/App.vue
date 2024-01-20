@@ -27,7 +27,7 @@ import { useRouter } from 'vue-router'
 
 const router = useRouter()
 
-const popup = computed(() => router.currentRoute.value.hash)
+const popup = computed(() => Boolean(router.currentRoute.value.hash))
 </script>
 
 <style lang="scss">
