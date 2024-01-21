@@ -1,14 +1,14 @@
 <template>
-  <div class="flex flex-col gap-5 sm:gap-16">
+  <div class="flex flex-col gap-5">
     <!-- Services header -->
     <div class="flex justify-between">
       <!-- Services article -->
-      <div class="text-4xl font-bold sm:text-6xl">Services</div>
+      <div class="text-4xl font-bold">Services</div>
       <!-- See All link -->
     </div>
 
     <Block title="Go anywhere, get anything">
-      <div class="grid grid-cols-3 gap-3.5 sm:gap-7">
+      <div class="grid grid-cols-3 gap-3.5">
         <!-- Suggestions -->
         <SuggestionItem
           v-for="({ promo, title, img }, key) in suggestionList"

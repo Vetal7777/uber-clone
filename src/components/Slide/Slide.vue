@@ -1,17 +1,15 @@
 <template>
-  <div
-    class="slide flex min-w-72 max-w-72 cursor-pointer flex-col gap-6 sm:min-w-110 sm:max-w-110"
-  >
+  <div class="slide flex min-w-72 max-w-72 cursor-pointer flex-col gap-6">
     <img :src="img" class="w-full rounded-2xl" lazy />
     <div class="flex flex-col gap-5">
-      <div class="flex flex-col gap-0.5 sm:gap-2">
-        <div class="text-l flex gap-1 sm:gap-3 sm:text-3xl">
+      <div class="flex flex-col gap-0.5">
+        <div class="text-l flex gap-1">
           {{ title }}
           <div class="icon transition-all">
             <Icon icon="majesticons:arrow-right" color="black" />
           </div>
         </div>
-        <div class="text-base font-light text-base-gray sm:text-2xl">
+        <div class="text-base font-light text-base-gray">
           {{ description }}
         </div>
       </div>

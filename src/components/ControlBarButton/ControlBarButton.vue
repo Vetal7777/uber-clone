@@ -1,7 +1,7 @@
 <template>
   <button
     :class="[
-      'flex h-16 cursor-pointer flex-col items-center justify-end gap-0.5 pb-2 text-sm text-base-gray transition-all hover:opacity-70 sm:h-32 sm:gap-2 sm:pb-6 sm:text-xl',
+      'flex h-16 cursor-pointer flex-col items-center justify-end gap-0.5 pb-2 text-sm text-base-gray transition-all hover:opacity-70 ',
       { active: actvie }
     ]"
   >
@@ -9,7 +9,7 @@
       v-if="iconifyName"
       :icon="iconifyName"
       :color="actvie ? 'black' : '#A6A6A6'"
-      class="text-xl sm:text-5xl"
+      class="text-xl"
     />
     {{ title }}
   </button>
@@ -25,6 +25,6 @@ const slots = defineSlots()
 
 <style lang="scss" scoped>
 .active {
-  @apply pb-3 text-black sm:pb-8;
+  @apply pb-3 text-black;
 }
 </style>
