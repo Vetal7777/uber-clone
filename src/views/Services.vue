@@ -8,7 +8,7 @@
     </div>
 
     <Block title="Go anywhere, get anything">
-      <div class="grid grid-cols-3 gap-7">
+      <div class="grid grid-cols-3 gap-3.5 sm:gap-7">
         <!-- Suggestions -->
         <SuggestionItem
           v-for="({ promo, title, img }, key) in suggestionList"
