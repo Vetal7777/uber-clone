@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col gap-8">
     <!-- Header -->
-    <header>
+    <header class="flex justify-start">
       <div v-html="LogoSvgIco" class="svg-image" />
     </header>
     <!-- Main -->
