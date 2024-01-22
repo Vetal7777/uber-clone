@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="currentPopup"
-    class="fixed bottom-0 left-0 z-20 h-screen w-screen overflow-auto"
+    class="fixed left-0 top-0 z-20 h-screen w-screen overflow-auto"
   >
     <component :is="currentPopup" />
     <button
